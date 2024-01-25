@@ -1,0 +1,28 @@
+# --
+# Copyright (C) 2023 mo-azfar, https://github.com/mo-azfar
+# Copyright (C) 2001-2021 OTRS AG, https://otrs.com/
+# Copyright (C) 2021 Znuny GmbH, https://znuny.org/
+# --
+# This software comes with ABSOLUTELY NO WARRANTY. For details, see
+# the enclosed file COPYING for license information (AGPL). If you
+# did not receive this file, see http://www.gnu.org/licenses/agpl.txt.
+# --
+
+<div id="MainBox" class="Login">
+    <div class="Content">
+        [% RenderBlockStart("Error") %]
+        <h2>[% Data.Message | html %]</h2>
+        <h3><a href="[% Env("Baselink") %]">[% Translate("Visit Our FAQ Here") | html %]</a></h3>
+        [% RenderBlockEnd("Error") %]	
+        [% RenderBlockStart("Closing") %]
+        <h2>[% Translate("Ticket#") | html %][% Data.TicketNumber | html %][% Translate(" is now closed.") | html %]</h2>
+        <h3>[% Translate("Dont Forget to Rate Us Later.") | html %]</h3>
+        <h3><a href="[% Env("Baselink") %]">[% Translate("Visit Our FAQ Here") | html %]</a></h3>
+        [% RenderBlockEnd("Closing") %]	
+        [% RenderBlockStart("Closed") %]
+        <h2>[% Translate("Ticket#") | html %][% Data.TicketNumber | html %][% Translate(" already closed.") | html %]</h2>
+        <h3>[% Translate("Dont Forget to Rate Us Later.") | html %]</h3>
+        <h3><a href="[% Env("Baselink") %]">[% Translate("Visit Our FAQ Here") | html %]</a></h3>
+        [% RenderBlockEnd("Closed") %]	
+    </div>
+</div>
