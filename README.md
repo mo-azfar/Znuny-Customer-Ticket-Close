@@ -6,6 +6,7 @@ One time link to be attached at reply template
 
 	https://<OTRS_CONFIG_FQDN>/<OTRS_CONFIG_ScriptAlias>public.pl?Action=PublicTicketClose;SessionID=<OTRS_TICKET_DynamicField_CustomerSession>;TicketNumber=<OTRS_TICKET_TicketNumber>
 
+**You may want to turn off SessionCheckRemoteIP
   
     
 1) Ticket owner generated temp session id using 'GENERATE TICKET CLOSE SESSION' ticket zoom menu.  
