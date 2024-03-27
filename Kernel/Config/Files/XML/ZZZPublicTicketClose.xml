@@ -15,7 +15,7 @@
             </Hash>
         </Value>
     </Setting>
-    <Setting Name="PublicFrontend::Module###PublicTicketClose" Required="0" Valid="1">
+	    <Setting Name="PublicFrontend::Module###PublicTicketClose" Required="0" Valid="1">
         <Description Translatable="1">Frontend module registration for the Public interface.</Description>
         <Navigation>Frontend::Public::ModuleRegistration</Navigation>
         <Value>
@@ -36,23 +36,23 @@
             </Item>
         </Value>
     </Setting>
-	<Setting Name="Loader::Module::PublicTicketClose###002-Ticket" Required="0" Valid="1">
+    <Setting Name="Loader::Module::PublicTicketClose###002-Ticket" Required="0" Valid="1">
         <Description Translatable="1">Loader module registration for the public interface.</Description>
-        <Navigation>Frontend::Public::ModuleRegistration::Loader</Navigation>
+        <Navigation>Frontend::Public::ModuleRegistration</Navigation>
         <Value>
             <Hash>
                 <Item Key="JavaScript">
                     <Array>
                     </Array>
                 </Item>
-				<Item Key="CSS">
+                <Item Key="CSS">
                     <Array>
                     </Array>
                 </Item>
             </Hash>
         </Value>
     </Setting>
-	<Setting Name="Frontend::Module###AgentTicketCustomerSession" Required="0" Valid="1">
+    <Setting Name="Frontend::Module###AgentTicketCustomerSession" Required="0" Valid="1">
         <Description Translatable="1">FrontendModuleRegistration for AgentTicketCustomerSession module.</Description>
         <Navigation>Frontend::Agent::ModuleRegistration</Navigation>
         <Value>
@@ -73,11 +73,11 @@
             </Item>
         </Value>
     </Setting>
-	<Setting Name="Ticket::Frontend::AgentTicketCustomerSession###DynamicField" Required="0" Valid="1">
+    <Setting Name="Ticket::Frontend::AgentTicketCustomerSession###DynamicField" Required="0" Valid="1">
         <Description Translatable="1">Ticket dynamic fields that hold temporary customer user session value for module PublicTicketClose.</Description>
         <Navigation>Frontend::Agent::View::TicketCustomerSession</Navigation>
         <Value>
-			<Item ValueType="String">CustomerSession</Item>
-		</Value>
-    </Setting>	
+            <Item ValueType="String">CustomerSession</Item>
+        </Value>
+    </Setting>  
 </otrs_config>

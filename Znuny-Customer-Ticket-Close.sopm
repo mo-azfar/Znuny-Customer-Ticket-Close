@@ -1,20 +1,21 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <otrs_package version="1.0">
-	<Name>Znuny-Customer-Ticket-Close</Name>
-	<Version>7.0.7</Version>
-	<Vendor>mo-azfar</Vendor>
-	<URL>https://github.com/mo-azfar</URL>
-	<License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
-	<ChangeLog Version="7.0.1" Date="2024-01-25 10:00:00 +0800">New package.</ChangeLog> 
+    <Name>Znuny-Customer-Ticket-Close</Name>
+    <Version>7.0.8</Version>
+    <Vendor>mo-azfar</Vendor>
+    <URL>https://github.com/mo-azfar</URL>
+    <License>GNU GENERAL PUBLIC LICENSE Version 3, 29 June 2007</License>
+    <ChangeLog Version="7.0.1" Date="2024-01-25 10:00:00 +0800">New package.</ChangeLog> 
     <ChangeLog Version="7.0.2" Date="2024-01-25 11:00:00 +0800">Use public portal instead of customer portal.</ChangeLog>
     <ChangeLog Version="7.0.3" Date="2024-01-25 12:00:00 +0800">Set one clik url only for registered customer.</ChangeLog>
     <ChangeLog Version="7.0.4" Date="2024-01-25 15:00:00 +0800">Update code.</ChangeLog> 
     <ChangeLog Version="7.0.5" Date="2024-01-25 16:00:00 +0800">Add dynamic field config.</ChangeLog>
     <ChangeLog Version="7.0.6" Date="2024-01-30 10:00:00 +0800">Use menu button instead of widget button.</ChangeLog>
     <ChangeLog Version="7.0.7" Date="2024-01-19 07:00:00 +0800">Change directory to default.</ChangeLog>
-	<Description Lang="en">Allow customer to close their ticket via one-time link (public portal) provided by the agent reply</Description>
-	<Framework>7.0.x</Framework>
-	<IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
+    <ChangeLog Version="7.0.8" Date="2024-03-27 09:00:00 +0800">Applied code policy.</ChangeLog>
+    <Description Lang="en">Allow customer to close their ticket via one-time link (public portal) provided by the agent reply</Description>
+    <Framework>7.0.x</Framework>
+    <IntroInstall Lang="en" Title="Install Information" Type="pre"><![CDATA[
         <br/>
         <b>WELCOME</b>
         <br/>
@@ -39,17 +40,18 @@
         7.0.4 - Update code.<br/>
         7.0.5 - Add dynamic field config.<br/>
         7.0.6 - Use menu button instead of widget button.<br/>
-        7.0.7 - Change directory to default.
+        7.0.7 - Change directory to default.<br/>
+        7.0.8 - Applied code policy.
         <br/><br/>
         ((enjoy))<br/>
         <br/>
     ]]></IntroUpgrade>
-	<Filelist>
-		<File Permission="644" Location="Kernel/Config/Files/XML/ZZZPublicTicketClose.xml"></File>
-		<File Permission="644" Location="Kernel/Modules/PublicTicketClose.pm"></File>
+    <Filelist>
+        <File Permission="644" Location="Kernel/Config/Files/XML/ZZZPublicTicketClose.xml"></File>
+        <File Permission="644" Location="Kernel/Modules/PublicTicketClose.pm"></File>
         <File Permission="644" Location="Kernel/Output/HTML/Templates/Standard/PublicTicketClose.tt"></File>
         <File Permission="644" Location="Kernel/Modules/AgentTicketCustomerSession.pm"></File>
-	</Filelist>
+    </Filelist>
     <CodeInstall><![CDATA[
 my $ZnunyHelperObject = $Kernel::OM->Get('Kernel::System::ZnunyHelper');
 my @DynamicFields = (
